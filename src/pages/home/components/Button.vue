@@ -1,0 +1,35 @@
+<template>
+  <div class="button">
+    <div class="button_item">基金捐赠</div>
+    <div class="button_item">认养“浙科大树”</div>
+    <div class="button_item">回“家”报到</div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HomeButton'
+}
+</script>
+
+<style lang="stylus" scoped>
+  .button
+    display: flex
+    justify-content: space-between
+    margin: .3rem .17rem .3rem .17rem
+    .button_item
+      background: #fff
+      font-size: .26rem
+      letter-spacing: .04rem
+      border: .01rem solid #dbdbdb
+      color: #231815
+      width: 2.1rem
+      height: .84rem
+      border-radius: .7rem
+      text-align: center
+      line-height: .83rem
+      padding: 0 .1rem 0 .1rem
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+</style>
