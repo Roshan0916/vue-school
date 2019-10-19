@@ -127,7 +127,7 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper >>> .swiper-pagination-bullet
-    margin:0 .05rem .6rem .05rem
+    margin:0 .05rem .55rem .05rem
     width:.12rem
     height:.12rem
 .wrapper >>> .swiper-pagination-bullet-active
@@ -135,8 +135,6 @@ export default {
     width:.24rem
     height:.12rem
     border-radius: .2rem
-    margin-bottom:.6rem
-
   .wrapper
     overflow: hidden
     height: 5.78rem
@@ -159,6 +157,7 @@ export default {
         margin-left: .12rem
         .sy_banner_desc1
           font-size: .26rem
+          line-height .3rem
           letter-spacing: .04rem
           margin-bottom :0
           width: 4rem
@@ -167,6 +166,7 @@ export default {
           text-overflow: ellipsis
           white-space: nowrap
         .sy_banner_desc2
+          font-size: .2rem
           margin:0
           padding: 0
           color: #9fa0a0;
@@ -182,7 +182,7 @@ export default {
           float: left
           color: #9fa0a0
           font-size: .2rem
-          margin-top: .18rem
+          margin-top: .1rem
           margin-left: .03rem
     .sy_banner_img
       height: 3.34rem
@@ -197,7 +197,7 @@ export default {
       letter-spacing: .03rem
       color: #2e2623
       padding: .5rem .42rem 0 .42rem
-      margin-bottom :0
+      margin-bottom :0 !important
       text-overflow: ellipsis
       display: -webkit-box
       -webkit-line-clamp: 2
