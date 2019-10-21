@@ -10,11 +10,21 @@ import 'styles/reset.css'
 import 'styles/border.css'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+/* eslint-disable */
+import { Button } from 'vant'
+import { Tabbar, TabbarItem } from 'vant'
+import { NavBar } from 'vant'
+import { Field } from 'vant'
+// import '../build/common'
 
+Vue.use(Field)
+Vue.use(NavBar)
+Vue.use(Tabbar).use(TabbarItem)
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 Vue.use(Antd)
+Vue.use(Button)
 
 /* eslint-disable no-new */
 new Vue({
