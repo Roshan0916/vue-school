@@ -23,12 +23,11 @@ export default {
       letter-spacing: .04rem
       border: .01rem solid #dbdbdb
       color: #231815
-      width: 2.1rem
+      width: 2.29rem
       height: .84rem
       border-radius: .7rem
       text-align: center
       line-height: .83rem
-      padding: 0 .1rem 0 .1rem
       overflow: hidden
       text-overflow: ellipsis
       white-space: nowrap

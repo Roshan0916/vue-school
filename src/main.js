@@ -15,8 +15,9 @@ import { Button } from 'vant'
 import { Tabbar, TabbarItem } from 'vant'
 import { NavBar } from 'vant'
 import { Field } from 'vant'
-// import '../build/common'
+import { Cell, CellGroup } from 'vant'
 
+Vue.use(Cell).use(CellGroup)
 Vue.use(Field)
 Vue.use(NavBar)
 Vue.use(Tabbar).use(TabbarItem)
