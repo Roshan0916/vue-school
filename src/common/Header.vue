@@ -1,15 +1,20 @@
 <template>
-  <div class="header">认养大树</div>
+  <div class="header"><slot></slot></div>
 </template>
 
 <script>
 export default {
-  name: 'TreeHeader'
+  name: 'HeaderTitle'
 }
 </script>
 
 <style lang="stylus" scoped>
   .header
+    position: fixed
+    left: 0
+    top: 0
+    right:0
+    bottom:0
     height: .87rem
     background-color: #fff
     border-bottom: solid 0.01rem #e8e5e5

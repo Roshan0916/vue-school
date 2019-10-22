@@ -24,4 +24,4 @@ body {font-family: Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-s
 hr {height: .02rem;margin: .1rem 0;border: medium none;border-top: .02rem solid #cacaca;}
 a {color: #25a4bb;text-decoration: none;}
 p{margin-bottom: 0!important}
-body{background:#f3f3f4 !important}
+body{background:#f3f3f4 !important;padding-top: .88rem!important}

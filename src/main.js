@@ -15,8 +15,11 @@ import { Button } from 'vant'
 import { Tabbar, TabbarItem } from 'vant'
 import { NavBar } from 'vant'
 import { Field } from 'vant'
+import { Dialog } from 'vant'
 import { Cell, CellGroup } from 'vant'
+import animate from 'animate.css'
 
+Vue.use(Dialog)
 Vue.use(Cell).use(CellGroup)
 Vue.use(Field)
 Vue.use(NavBar)

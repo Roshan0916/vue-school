@@ -1,16 +1,16 @@
 <template>
   <div class="bg">
-    <in-header></in-header>
+    <return-header>我的资料</return-header>
     <my-info></my-info>
   </div>
 </template>
 
 <script>
-import InHeader from './components/Header'
+import ReturnHeader from 'common/ReturnHeader'
 import MyInfo from './components/Info'
 export default {
   components: {
-    InHeader,
+    ReturnHeader,
     MyInfo
   }
 }
@@ -19,6 +19,7 @@ export default {
 <style lang="stylus" scoped>
 .bg
   position: fixed
+  margin: .88rem 0 1rem 0
   z-index: 100
   top: 0
   left: 0

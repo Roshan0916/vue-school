@@ -6,6 +6,8 @@ import Tree from '@/pages/tree/Tree'
 import Me from '@/pages/me/Me'
 import Myinfomation from '@/pages/myinfomation/Myinfomation'
 import Myadoption from '@/pages/myadoption/Myadoption'
+import Mydonation from '@/pages/mydonation/Mydonation'
+import Drink from '@/pages/drink/Drink'
 
 Vue.use(Router)
 
@@ -23,7 +25,13 @@ export default new Router({
     {
       path: '/donation',
       name: 'Donation',
-      component: Donation
+      component: Donation,
+      children: [
+        {
+          path: ':drink',
+          component: Drink
+        }
+      ]
     },
     {
       path: '/tree',
@@ -36,11 +44,15 @@ export default new Router({
       component: Me,
       children: [
         {
-          path: ':myinfomation',
+          path: 'myinfomation',
           component: Myinfomation
         },
         {
-          path: ':myadoption',
+          path: 'mydonation',
+          component: Mydonation
+        },
+        {
+          path: 'myadoption',
           component: Myadoption
         }
       ]

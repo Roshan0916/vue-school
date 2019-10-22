@@ -1,6 +1,6 @@
 <template>
   <div class="body_bg">
-    <home-header></home-header>
+    <header-title>校友之家</header-title>
     <home-img></home-img>
     <home-button></home-button>
     <home-swiper></home-swiper>
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import HomeHeader from './components/Header'
+import HeaderTitle from 'common/Header'
 import HomeImg from './components/Img'
 import HomeButton from './components/Button'
 import HomeSwiper from './components/Swiper'
 export default {
   name: 'Home',
   components: {
-    HomeHeader,
+    HeaderTitle,
     HomeImg,
     HomeButton,
     HomeSwiper

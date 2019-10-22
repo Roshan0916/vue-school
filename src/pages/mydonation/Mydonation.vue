@@ -1,6 +1,6 @@
 <template>
   <div>
-    <return-header>我的认养</return-header>
+    <return-header>我的捐赠</return-header>
     <my-card></my-card>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <me-header></me-header>
+    <header-title>个人中心</header-title>
     <router-link tag="div" class="me_box" to="/me/myinfomation">
       <div class="me_icon_box">
         <img src="@/assets/ziliao-icon.png" />
@@ -12,7 +12,7 @@
         </div>
       </div>
     </router-link>
-    <router-link tag="div" class="me_box" to="/me/myinfomation">
+    <router-link tag="div" class="me_box" to="/me/mydonation">
       <div class="me_icon_box">
         <img src="@/assets/juanzeng-icon.png" />
       </div>
@@ -23,7 +23,7 @@
         </div>
       </div>
     </router-link>
-    <router-link tag="div" to="/me/myinfomation" class="me_box" style="border-bottom: .02rem solid #d5d6d7">
+    <router-link tag="div" to="/me/myadoption" class="me_box" style="border-bottom: .02rem solid #d5d6d7">
       <div class="me_icon_box" >
         <img src="@/assets/renyang-icon.png" />
       </div>
@@ -39,10 +39,10 @@
 </template>
 
 <script>
-import MeHeader from './components/Header'
+import HeaderTitle from 'common/Header'
 export default {
   components: {
-    MeHeader
+    HeaderTitle
   }
 
 }
