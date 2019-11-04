@@ -1,34 +1,37 @@
 <template>
   <div class="bg" ref="wrapper">
-    <div>
+    <ul>
      <div class="ry_wrapper">
-      <div class="ry_card">
+      <div class="ry_card" v-for="item in list" :key="item.id">
         <div class="ry_card_intro">
           <div class="ry_card_intro_item">
             <p class="ry_intro_left">姓名</p>
-            <p class="ry_intro_right">张三</p>
+            <p class="ry_intro_right">{{item.adopter_name}}</p>
           </div>
           <div class="ry_card_intro_item">
             <p class="ry_intro_left">类型</p>
-            <p class="ry_intro_right">个人认养</p>
+            <p class="ry_intro_right">{{item.adopt_type}}</p>
           </div>
           <div class="ry_card_intro_item">
             <p class="ry_intro_left">状态</p>
-            <p class="ry_intro_right">审核中</p>
+            <p class="ry_intro_right">{{item.a_state}}</p>
           </div>
           </div>
           <div class="ry_more">
-            <p class="ry_more_title">你于2019年10月2日申请领养浙江科技学院的某树，正在审核中，感谢你对母校的支持。</p>
+            <p class="ry_more_title">你于{{item.created_at}}申请领养浙江科技学院的某树，正在审核中，感谢你对母校的支持。</p>
           </div>
         </div>
       </div>
-    </div>
+    </ul>
   </div>
 </template>
 
 <script>
 import Bscroll from 'better-scroll'
 export default {
+  props: {
+    list: Array
+  },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
   }

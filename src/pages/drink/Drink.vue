@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <header-title></header-title>
-    <drink-img></drink-img>
+    <drink-img :list="bannerlist"></drink-img>
     <drink-choose></drink-choose>
   </div>
 </template>
@@ -10,12 +10,29 @@
 import HeaderTitle from 'common/Header'
 import DrinkImg from './components/Img'
 import DrinkChoose from './components/Choose'
+import {getBannerList} from '@/api/banner'
 export default {
+  created () {
+    this._getBannerList()
+  },
+  data () {
+    return {
+      bannerlist: []
+    }
+  },
   name: 'Drink',
   components: {
     HeaderTitle,
     DrinkImg,
     DrinkChoose
+  },
+  methods: {
+    _getBannerList () {
+      getBannerList().then((res) => {
+        res = res.data
+        this.bannerlist = res
+      })
+    }
   }
 }
 </script>

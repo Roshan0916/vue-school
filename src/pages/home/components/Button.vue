@@ -1,8 +1,8 @@
 <template>
   <div class="button">
     <router-link tag="div" class="button_item" to="/donation">基金捐赠</router-link>
-    <div class="button_item">认养“浙科大树”</div>
-    <div class="button_item">回“家”报到</div>
+    <router-link tag="div"  class="button_item" to="/tree">认养“浙科大树”</router-link>
+    <router-link tag="div"  class="button_item" to="/me">回“家”报到</router-link>
   </div>
 </template>
 

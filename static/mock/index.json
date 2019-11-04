@@ -1,0 +1,47 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [{
+    "id": 1,
+    "title": "bkbkbk",
+    "abstract": "sdsadsa",
+    "photo_url": "sdad",
+    "photo_position": 2,
+    "link_jump_url": "asdasda",
+    "remark": "asdasd",
+    "state": 1,
+    "created_at": null,
+    "updated_at": null,
+    "arrow": true,
+    "message": false,
+    "number": 1
+  }, {
+    "id": 2,
+    "title": "bk_test",
+    "abstract": "sasa",
+    "photo_url": "admin@admin.com",
+    "photo_position": 2,
+    "link_jump_url": "admin@admin.com",
+    "remark": "ming_test",
+    "state": null,
+    "created_at": "2019-10-22 02:04:05",
+    "updated_at": "2019-10-22 02:04:05",
+    "arrow": true,
+    "message": false,
+    "number": 1
+  }, {
+    "id": 3,
+    "title": "bk_test",
+    "abstract": "sasa",
+    "photo_url": "admin@admin.com",
+    "photo_position": 2,
+    "link_jump_url": "com",
+    "remark": "ming_test",
+    "state": null,
+    "created_at": "2019-10-22 02:35:15",
+    "updated_at": "2019-10-22 02:35:15",
+    "arrow": true,
+    "message": false,
+    "number": 1
+  }]
+}

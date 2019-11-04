@@ -1,0 +1,23 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [{
+    "id": 1,
+    "news_title": "news_test",
+    "news_photo_url": "admin@admin.com",
+    "news_abstract": "dodolo",
+    "likes_number": 25,
+    "news_content": "dodolo2",
+    "created_at": "2019-10-23 01:10:20",
+    "updated_at": "2019-10-23 01:10:20"
+  }, {
+    "id": 3,
+    "news_title": "news_test_3",
+    "news_photo_url": "admin@admin.com",
+    "news_abstract": "dodsaolo",
+    "likes_number": 12,
+    "news_content": "dodolo2",
+    "created_at": "2019-10-23 05:51:15",
+    "updated_at": "2019-10-23 05:51:15"
+  }]
+}

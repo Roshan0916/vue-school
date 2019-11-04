@@ -8,6 +8,7 @@ import Myinfomation from '@/pages/myinfomation/Myinfomation'
 import Myadoption from '@/pages/myadoption/Myadoption'
 import Mydonation from '@/pages/mydonation/Mydonation'
 import Drink from '@/pages/drink/Drink'
+import Detail from '@/pages/detail/Detail'
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/detail/:id',
+      name: 'Detail',
+      component: Detail
     },
     {
       path: '/donation',
@@ -57,5 +63,8 @@ export default new Router({
         }
       ]
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

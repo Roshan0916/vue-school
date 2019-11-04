@@ -4,104 +4,39 @@
      <div class="jz_wrapper">
       <div class="jz_total">
         <p class="jz_desc">捐赠总金额</p>
-        <p class="jz_total_number">￥2000.00</p>
+        <p class="jz_total_number">￥{{total}}.00</p>
       </div>
     </div>
-    <ul>
+    <ul v-for="item in list" :key="item.id">
       <li class="jz_card">
         <p class="jz_card_title">捐赠金额</p>
-        <p class="jz_card_number">￥1000.00</p>
+        <p class="jz_card_number">￥{{item.donate_number}}.00</p>
         <div class="jz_card_intro">
           <div class="jz_card_intro_item">
             <p class="jz_intro_left">姓名</p>
-            <p class="jz_intro_right">张三</p>
+            <p class="jz_intro_right">{{item.donor_name}}</p>
           </div>
           <div class="jz_card_intro_item">
             <p class="jz_intro_left">对象</p>
-            <p class="jz_intro_right">浙江科技学院教育基金会</p>
+            <p class="jz_intro_right">{{item.to_donate_people}}</p>
           </div>
           <div class="jz_card_intro_item">
             <p class="jz_intro_left">日期</p>
-            <p class="jz_intro_right">2019-10-01</p>
+            <p class="jz_intro_right">{{item.created_at}}</p>
           </div>
         </div>
         <div class="jz_more">
           <div class="jz_more_title">
             <p>查看寄语</p>
           </div>
-          <div class="jz_arrow" @click="OnMoreClick">
+          <div class="jz_arrow" @click='OnMoreClick(item)'>
             <img src="@/assets/arrow-right.png"
-            :class="[arrow ? 'jz_arrow' : 'jz_arrow_on']"
+            :class="[item.arrow ? 'jz_arrow_on' : 'jz_arrow']"
             />
           </div>
         </div>
-        <div class="jz_more_content" v-show="message">
-          <p>是非成败转头空，青山依旧在，惯看秋月春风。一壶浊酒喜相逢，古今多少事滚滚长江东逝水浪花淘尽英雄。
-            几度夕阳红。白发渔樵江渚上，都付笑谈中滚滚长江东逝水，浪花淘尽英雄是非成败转头空，青山依旧在，几度夕阳红白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢古今多少事都付笑谈中。</p>
-        </div>
-      </li>
-      <li class="jz_card">
-        <p class="jz_card_title">捐赠金额</p>
-        <p class="jz_card_number">￥1000.00</p>
-        <div class="jz_card_intro">
-          <div class="jz_card_intro_item">
-            <p class="jz_intro_left">姓名</p>
-            <p class="jz_intro_right">张三</p>
-          </div>
-          <div class="jz_card_intro_item">
-            <p class="jz_intro_left">对象</p>
-            <p class="jz_intro_right">浙江科技学院教育基金会</p>
-          </div>
-          <div class="jz_card_intro_item">
-            <p class="jz_intro_left">日期</p>
-            <p class="jz_intro_right">2019-10-01</p>
-          </div>
-        </div>
-        <div class="jz_more">
-          <div class="jz_more_title">
-            <p>查看寄语</p>
-          </div>
-          <div class="jz_arrow" @click="OnMoreClick">
-            <img src="@/assets/arrow-right.png"
-            :class="[arrow ? 'jz_arrow' : 'jz_arrow_on']"
-            />
-          </div>
-        </div>
-        <div class="jz_more_content" v-show="message">
-          <p>是非成败转头空，青山依旧在，惯看秋月春风。一壶浊酒喜相逢，古今多少事滚滚长江东逝水浪花淘尽英雄。
-            几度夕阳红。白发渔樵江渚上，都付笑谈中滚滚长江东逝水，浪花淘尽英雄是非成败转头空，青山依旧在，几度夕阳红白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢古今多少事都付笑谈中。</p>
-        </div>
-      </li>
-      <li class="jz_card">
-        <p class="jz_card_title">捐赠金额</p>
-        <p class="jz_card_number">￥1000.00</p>
-        <div class="jz_card_intro">
-          <div class="jz_card_intro_item">
-            <p class="jz_intro_left">姓名</p>
-            <p class="jz_intro_right">张三</p>
-          </div>
-          <div class="jz_card_intro_item">
-            <p class="jz_intro_left">对象</p>
-            <p class="jz_intro_right">浙江科技学院教育基金会</p>
-          </div>
-          <div class="jz_card_intro_item">
-            <p class="jz_intro_left">日期</p>
-            <p class="jz_intro_right">2019-10-01</p>
-          </div>
-        </div>
-        <div class="jz_more">
-          <div class="jz_more_title">
-            <p>查看寄语</p>
-          </div>
-          <div class="jz_arrow" @click="OnMoreClick">
-            <img src="@/assets/arrow-right.png"
-            :class="[arrow ? 'jz_arrow' : 'jz_arrow_on']"
-            />
-          </div>
-        </div>
-        <div class="jz_more_content" v-show="message">
-          <p>是非成败转头空，青山依旧在，惯看秋月春风。一壶浊酒喜相逢，古今多少事滚滚长江东逝水浪花淘尽英雄。
-            几度夕阳红。白发渔樵江渚上，都付笑谈中滚滚长江东逝水，浪花淘尽英雄是非成败转头空，青山依旧在，几度夕阳红白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢古今多少事都付笑谈中。</p>
+        <div class="jz_more_content" v-show="item.message">
+          <p>{{item.d_remark}}</p>
         </div>
       </li>
     </ul>
@@ -112,16 +47,20 @@
 <script>
 import Bscroll from 'better-scroll'
 export default {
-  data () {
-    return {
-      arrow: true,
-      message: false
-    }
+  props: {
+    list: Array
   },
   methods: {
-    OnMoreClick () {
-      this.arrow = !this.arrow
-      this.message = !this.message
+    OnMoreClick (item) {
+      item.arrow = !item.arrow
+      item.message = !item.message
+    }
+  },
+  computed: {
+    total () {
+      let total = 0
+      this.list.map((item) => { total += item.donate_number })
+      return total
     }
   },
   mounted () {

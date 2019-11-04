@@ -64,6 +64,7 @@ export default {
       img
         height: 1.18rem
         width: 1.18rem
+        object-fit: cover
     input[type="radio"]+label::before
       content: "\a0"
       /*不换行空格*/

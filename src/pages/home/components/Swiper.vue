@@ -1,111 +1,32 @@
 <template>
   <div class="wrapper">
     <swiper :options="swiperOption">
-    <swiper-slide>
-      <div class="sy_banner_top">
-        <div class="sy_banner_top_img">
-          <img src="@/assets/banner-icon.png" />
-        </div>
-        <div class="sy_banner_top_desc">
-          <p class="sy_banner_desc1">校园风光</p>
-          <p class="sy_banner_desc2">10-08</p>
-        </div>
-        <div class="sy_banner_top_zan">
-          <img src="@/assets/good.png" />
-          <p class="sy_zan_desc">10</p>
-        </div>
-      </div>
-      <div class="sy_banner_img">
-        <img src="@/assets/banner1.png" />
-      </div>
-      <div class="sy_banner_desc">
-        <p> 下午的校园，清凉，静谧，是远离浮华与喧嚣的一块净地。在这里，唯有朗朗的读书声，和不含杂质的自由清新的在这里，唯有朗朗的读书声，和不含杂质的自由清新的</p>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="sy_banner_top">
-        <div class="sy_banner_top_img">
-          <img src="@/assets/banner-icon.png" />
-        </div>
-        <div class="sy_banner_top_desc">
-          <p class="sy_banner_desc1">校园风光</p>
-          <p class="sy_banner_desc2">10-08</p>
-        </div>
-        <div class="sy_banner_top_zan">
-          <img src="@/assets/good.png" />
-          <p class="sy_zan_desc">10</p>
-        </div>
-      </div>
-      <div class="sy_banner_img">
-        <img src="@/assets/banner1.png" />
-      </div>
-      <div class="sy_banner_desc">
-        <p> 下午的校园，清凉，静谧，是远离浮华与喧嚣的一块净地。在这里，唯有朗朗的读书声，和不含杂质的自由清新的在这里，唯有朗朗的读书声，和不含杂质的自由清新的</p>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="sy_banner_top">
-        <div class="sy_banner_top_img">
-          <img src="@/assets/banner-icon.png" />
-        </div>
-        <div class="sy_banner_top_desc">
-          <p class="sy_banner_desc1">校园风光</p>
-          <p class="sy_banner_desc2">10-08</p>
-        </div>
-        <div class="sy_banner_top_zan">
-          <img src="@/assets/good.png" />
-          <p class="sy_zan_desc">10</p>
-        </div>
-      </div>
-      <div class="sy_banner_img">
-        <img src="@/assets/banner1.png" />
-      </div>
-      <div class="sy_banner_desc">
-        <p> 下午的校园，清凉，静谧，是远离浮华与喧嚣的一块净地。在这里，唯有朗朗的读书声，和不含杂质的自由清新的在这里，唯有朗朗的读书声，和不含杂质的自由清新的</p>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="sy_banner_top">
-        <div class="sy_banner_top_img">
-          <img src="@/assets/banner-icon.png" />
-        </div>
-        <div class="sy_banner_top_desc">
-          <p class="sy_banner_desc1">校园风光</p>
-          <p class="sy_banner_desc2">10-08</p>
-        </div>
-        <div class="sy_banner_top_zan">
-          <img src="@/assets/good.png" />
-          <p class="sy_zan_desc">10</p>
-        </div>
-      </div>
-      <div class="sy_banner_img">
-        <img src="@/assets/banner1.png" />
-      </div>
-      <div class="sy_banner_desc">
-        <p> 下午的校园，清凉，静谧，是远离浮华与喧嚣的一块净地。在这里，唯有朗朗的读书声，和不含杂质的自由清新的在这里，唯有朗朗的读书声，和不含杂质的自由清新的</p>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="sy_banner_top">
-        <div class="sy_banner_top_img">
-          <img src="@/assets/banner-icon.png" />
-        </div>
-        <div class="sy_banner_top_desc">
-          <p class="sy_banner_desc1">校园风光</p>
-          <p class="sy_banner_desc2">10-08</p>
-        </div>
-        <div class="sy_banner_top_zan">
-          <img src="@/assets/good.png" />
-          <p class="sy_zan_desc">10</p>
-        </div>
-      </div>
-      <div class="sy_banner_img">
-        <img src="@/assets/banner1.png" />
-      </div>
-      <div class="sy_banner_desc">
-        <p> 下午的校园，清凉，静谧，是远离浮华与喧嚣的一块净地。在这里，唯有朗朗的读书声，和不含杂质的自由清新的在这里，唯有朗朗的读书声，和不含杂质的自由清新的</p>
-      </div>
-    </swiper-slide>
+        <swiper-slide
+        v-for="item in list"
+        :key="item.id"
+        >
+          <div class="sy_banner_top">
+            <div class="sy_banner_top_img">
+              <img src="@/assets/banner-icon.png" />
+            </div>
+            <div class="sy_banner_top_desc">
+              <p class="sy_banner_desc1">{{item.news_title}}</p>
+              <p class="sy_banner_desc2">{{item.created_at}}</p>
+            </div>
+            <div class="sy_banner_top_zan">
+              <img src="@/assets/good.png" @click="getHomeZan"/>
+              <p class="sy_zan_desc">{{item.likes_number}}</p>
+            </div>
+          </div>
+           <router-link :to="'/detail/' + item.id">
+          <div class="sy_banner_img">
+            <img :src="item.news_photo_url" />
+          </div>
+          <div class="sy_banner_desc">
+            <p>{{item.news_content}}</p>
+          </div>
+              </router-link>
+        </swiper-slide>
     <div class="swiper-pagination"  slot="pagination"></div>
   </swiper>
   </div>
@@ -114,18 +35,41 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 3000
       }
+    }
+  },
+  methods: {
+    getHomeZan () {
+      this.$http.post('/api/member/news-zan',
+        {
+          id: this.id
+        }
+      )
+        .then((response) => {
+          alert('okok')
+        },
+        (response) => {
+          alert('nono')
+        }
+        )
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+.wrapper >>> .swiper-container-horizontal > .swiper-pagination-bullets
+    position: absolute
+    top: 4.5rem
 .wrapper >>> .swiper-pagination-bullet
     margin:0 .05rem .55rem .05rem
     width:.12rem
@@ -141,6 +85,7 @@ export default {
     margin: 0 .17rem .2rem .17rem
     border-radius: .2rem
     background: #fff
+    position: relative
     .sy_banner_top
       box-sizing: border-box
       padding: .23rem .34rem 0 .41rem
@@ -191,6 +136,7 @@ export default {
       overflow: hidden
       img
         width: 100%
+        object-fit: cover
     .sy_banner_desc
       font-size: .22rem
       line-height: .33rem
